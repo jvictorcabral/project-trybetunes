@@ -1,24 +1,26 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Album from './components/Album';
-import Favorites from './components/Favorites';
-import Login from './components/Login';
-import Profile from './components/Profile';
-import ProfileEdit from './components/ProfileEdit';
-import NotFound from './components/NotFound';
-import Search from './components/Search';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Album from './pages/Album';
+import Favorites from './pages/Favorites';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import ProfileEdit from './pages/ProfileEdit';
+import NotFound from './pages/NotFound';
+import Search from './pages/Search';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Route path="/" Component={ Login } />
-        <Route path="/search" Component={ Search } />
-        <Route path="/album/:id" Component={ Album } />
-        <Route path="/favorites" Component={ Favorites } />
-        <Route path="/profile" Component={ Profile } />
-        <Route path="/profile/edit" Component={ ProfileEdit } />
-        <Route path="/*" Component={ NotFound } />
+        <Switch>
+          <Route exact path="/" component={ Login } />
+          <Route exact path="/search" component={ Search } />
+          <Route exact path="/album/:id" component={ Album } />
+          <Route exact path="/favorites" component={ Favorites } />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/profile/edit" component={ ProfileEdit } />
+          <Route exact path="/*" component={ NotFound } />
+        </Switch>
       </BrowserRouter>
     );
   }
