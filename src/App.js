@@ -9,7 +9,8 @@ import NotFound from './pages/NotFound';
 import Search from './pages/Search';
 
 // requisito 1 fiz com a ajuda do Moises;
-// requisito 2 tambem com a ajuda do moises, e com a mentoria de revisao que ele fez;
+// requisito 2 tambem com a ajuda do Moises, e com a mentoria de revisao que ele fez;
+// requisito 3, adivinha quem me ajudou... Sim, o Moises tambem
 
 class App extends React.Component {
   render() {
