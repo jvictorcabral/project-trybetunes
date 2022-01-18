@@ -34,15 +34,35 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component">
         <div className="class-header">
+          <span>Ola</span>
           { loading ? <Loading />
             : <span data-testid="header-user-name">{ userName }</span> }
         </div>
         <nav>
-          <Link to="/search">Search</Link>
-          <Link to="/album/:id">Album</Link>
-          <Link to="/favotites">Favorites</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/profile/edit">Edit Profile</Link>
+          <Link
+            data-testid="link-to-search"
+            to="/search"
+          >
+            Search
+          </Link>
+
+          {/* <Link to="/album/:id">Album</Link> */}
+
+          <Link
+            data-testid="link-to-favorites"
+            to="/favorites"
+          >
+            Favorites
+          </Link>
+
+          <Link
+            data-testid="link-to-profile"
+            to="/profile"
+          >
+            Profile
+          </Link>
+
+          {/* <Link to="/profile/edit">Edit Profile</Link> */}
         </nav>
       </header>
     );
