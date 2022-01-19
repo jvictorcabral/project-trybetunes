@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import '../components/login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -45,9 +46,9 @@ class Login extends React.Component {
     const { disable, valueName, loading } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="div-login">
         { loading ? <Loading /> : (
-          <form>
+          <form className="form-login">
             <label htmlFor="login-name-input">
               Nome
               <input

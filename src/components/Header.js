@@ -34,7 +34,6 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component">
         <div className="class-header">
-          <span>Ola</span>
           { loading ? <Loading />
             : <span data-testid="header-user-name">{ userName }</span> }
         </div>
