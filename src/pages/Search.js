@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbums from '../services/searchAlbumsAPI';
 
-import '../components/search.css';
+// import '../components/search.css';
 
 class Search extends React.Component {
   constructor() {
