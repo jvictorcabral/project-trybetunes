@@ -6,7 +6,7 @@
 .form-login {
   background-color: rgb(241, 241, 241);
   border-radius: 5px;
-  box-shadow: 0 0px 10px #0e0e0ea9;
+  box-shadow: 0 0 10px #0e0e0ea9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,21 +29,21 @@
   background-color: #002fff;
   border: 1px solid #004d99;
   border-radius: 3px;
-  color: #ffffff;
+  color: white;
   padding: 5px 10px;
 }
 
 .form-login button:hover {
-  border: 1px solid #0099cc;
-  background-color: #0099ff;
-  color: #ffffff;
-  padding: 5px 10px;
+  background-color: #09f;
+  border: 1px solid #09c;
+  color: white;
   cursor: pointer;
+  padding: 5px 10px;
 }
 
 .form-login button:disabled {
-  background-color: #cccccc;
-  border: 1px solid #999999;
+  background-color: #ccc;
+  border: 1px solid #999;
   border-radius: 3px;
-  color: #666666;
+  color: #666;
 }
