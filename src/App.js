@@ -12,6 +12,7 @@ import Search from './pages/Search';
 // requisito 2 tambem com a ajuda do Moises, e com a mentoria de revisao que ele fez;
 // requisito 3, adivinha quem me ajudou... Sim, o Moises tambem
 // requisito 7 fui ajudado pelo Guilherme Hallmann
+// requisito 8 e 9 com ajuda do Guilherme Hallmann tambem
 
 class App extends React.Component {
   render() {
