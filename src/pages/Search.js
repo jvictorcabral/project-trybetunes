@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbums from '../services/searchAlbumsAPI';
 
-// import '../components/search.css';
+import '../components/search.css';
 
 class Search extends React.Component {
   constructor() {
@@ -37,8 +37,9 @@ class Search extends React.Component {
     }
   }
 
-  searchButton() {
+  searchButton(e) {
     const { valueName } = this.state;
+    e.preventDefault();
 
     this.setState({
       loading: true,
@@ -61,7 +62,7 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <form>
+        <form className="form-search">
           <input
             type="text"
             placeholder="Nome do Artista"
@@ -78,18 +79,19 @@ class Search extends React.Component {
             Pesquisar
           </button>
         </form>
+
         {albumNotFound && <h1>Nenhum álbum foi encontrado</h1>}
         { loading ? <Loading />
           : (
             <div className="albums-content">
               <div>
-                <h1>
+                <h2>
                   Resultado de álbuns de:
                   {' '}
                   { searchText }
-                </h1>
+                </h2>
                 { albums.map((album) => (
-                  <div key={ album.collectionId }>
+                  <div key={ album.collectionId } className="album">
                     <Link
                       to={ `album/${album.collectionId}` }
                       data-testid={ `link-to-album-${album.collectionId}` }

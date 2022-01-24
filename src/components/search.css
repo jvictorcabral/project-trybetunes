@@ -1,0 +1,43 @@
+.form-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form-search input {
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.form-search button {
+  background-color: #002fff;
+  border: 1px solid #004d99;
+  border-radius: 3px;
+  color: white;
+  padding: 8px 10px;
+}
+
+.form-search button:hover {
+  background-color: #09f;
+  border: 1px solid #09c;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.form-search button:disabled {
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 3px;
+  color: #666;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+.album {
+  border: 1px solid black;
+  display: flex;
+}
